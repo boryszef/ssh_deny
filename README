@@ -6,3 +6,14 @@ When it detects a certain number of lines that match predefined expressions,
 all coming from the same IP address and within a specified period of time,
 that IP address is added to blocked. Blocking is done by adding a rule to
 iptables.
+
+Basic configuration can be done in the script itself:
+timeout - after this time (in seconds) a failed attempts is retired and
+          no longer considered
+treshold - these many attempts within [timeout] constitute a break-in
+           attempt
+mail_server - SMTP server used to send emails
+recipient - e-mail address of the person to send notifications to
+sender - sender of the notifications
+reply_to - e-mail address for the reply-to field
+hostname - used to build a message ID
