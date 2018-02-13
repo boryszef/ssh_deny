@@ -1,0 +1,8 @@
+ssh_deny.py: a small Python script to block annoying attempts of brute-force
+attacks on SSH and SMTP ports.
+
+The script listens to logs for lines that indicate break-in attempts.
+When it detects a certain number of lines that match predefined expressions,
+all coming from the same IP address and within a specified period of time,
+that IP address is added to blocked. Blocking is done by adding a rule to
+iptables.
